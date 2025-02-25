@@ -646,6 +646,9 @@ body.creative-head .header-section {
 .section {
     padding: 5rem 0;
 }
+.team{
+    padding: 0;
+}
 
 .section-button {
     display: block;
@@ -1434,6 +1437,7 @@ hr.invis1 {
 .services p {
     padding: 0;
     margin: 0 0 1.2rem;
+    text-align: justify;
 }
 
 .services .widget-title {
