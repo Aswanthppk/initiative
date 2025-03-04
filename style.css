@@ -669,7 +669,7 @@ body.creative-head .header-section {
     right: 0;
     left: 0;
     bottom: 0;
-    background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 0.7);
+    background: url(images/pattern.jpg) repeat center center rgba(0, 0, 0, 0.7);
 }
 
 .nopadbot {
@@ -1292,7 +1292,7 @@ body.creative-head .header-section {
     letter-spacing: 2px;
     position: relative;
     line-height: 1.7;
-    font-size: 28px;
+    font-size: 52px;
     padding: 0 0 3rem;
     margin: 0;
 }
@@ -1309,14 +1309,33 @@ body.creative-head .header-section {
 
 .martop100 {
     margin-top: -150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .normal-box {
     position: relative;
-    padding: 3rem;
+    padding: 2rem;
     overflow: hidden;
     background-color: #ffffff;
+    box-shadow: 0 5px 15px 0 rgb(47 46 46 / 57%);
+    border-radius: 10px;
 }
+.bgimage{
+  
+  background: linear-gradient(rgba(198, 198, 198, 0.7), rgba(211, 205, 205, 0.6)) , url(images/expertise.jpg) center center;
+  background-size: cover;
+  
+
+
+}
+.satisfied{
+background: linear-gradient(rgba(198, 198, 198, 0.7), rgba(211, 205, 205, 0.6)) , url(images/satisfied.jpg) center center;
+  background-size: cover;
+}
+
 
 .image-box .details {
     z-index: 1;
@@ -1351,7 +1370,9 @@ hr.invis1 {
 }
 
 .normal-box p {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .normal-box h4,
@@ -1369,6 +1390,7 @@ hr.invis1 {
 
 .normal-box h4 {
     color: #141414;
+    font-weight: 600;
 }
 
 .tagline-message h3 span::after,
