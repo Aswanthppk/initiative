@@ -671,6 +671,11 @@ body.creative-head .header-section {
     bottom: 0;
     background: url(images/pattern.jpg) repeat center center rgba(0, 0, 0, 0.7);
 }
+.offer{
+    background: url(images/offer.png) repeat center center rgba(0, 0, 0, 0.7) !important;
+    background-size: 100%;
+    background-position: center top;
+}
 
 .nopadbot {
     padding-bottom: 0;
@@ -1307,6 +1312,13 @@ body.creative-head .header-section {
     overflow: hidden;
 }
 
+@media(max-width:768px){
+    .martop100 {
+        grid-template-columns: 1fr !important;
+
+    }
+}
+
 .martop100 {
     margin-top: -150px;
     display: grid;
@@ -1325,15 +1337,21 @@ body.creative-head .header-section {
 }
 .bgimage{
   
-  background: linear-gradient(rgba(198, 198, 198, 0.7), rgba(211, 205, 205, 0.6)) , url(images/expertise.jpg) center center;
+  background: linear-gradient(rgba(198, 198, 198, 0.8), rgba(211, 205, 205, 0.8)) , url(images/expertise.jpg) center center;
   background-size: cover;
-  
-
-
 }
 .satisfied{
-background: linear-gradient(rgba(198, 198, 198, 0.7), rgba(211, 205, 205, 0.6)) , url(images/satisfied.jpg) center center;
+background: linear-gradient(rgba(198, 198, 198, 0.8), rgba(211, 205, 205, 0.8)) , url(images/satisfied.jpg) center center;
   background-size: cover;
+}
+
+.solution{
+    background: linear-gradient(rgba(198, 198, 198, 0.8), rgba(211, 205, 205, 0.8)) , url(images/solution.jpg) center center;
+  background-size: cover;
+}
+.sustainable{
+    background: linear-gradient(rgba(198, 198, 198, 0.8), rgba(211, 205, 205, 0.8)) , url(images/sustainable.jpg) center center;
+    background-size: cover;
 }
 
 
