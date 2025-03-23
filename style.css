@@ -108,13 +108,13 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Oswald', serif;
+    font-family: 'Montserrat', serif;
 }
 
 .gform .form-control,
 body,
 p {
-    font-family: 'Karla', serif;
+    font-family: 'Montserrat', serif;
 }
 
 h1,
@@ -412,13 +412,13 @@ a:focus {
 }
 
 
-/* HEADER 
+/* HEADER 2889
 **************************************/
 
 .header {
     padding: 0;
     position: relative;
-    background-color: #141414 !important;
+    background-color: rgba(255, 255, 255, 0.963) !important;
 }
 
 body.boxed .header {
@@ -431,7 +431,7 @@ body.boxed .bg-inverse {
 }
 
 .normal-header {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
 }
 
 .normal-header .navbar {
@@ -672,7 +672,6 @@ body.creative-head .header-section {
     background: url(images/pattern.jpg) repeat center center rgba(0, 0, 0, 0.7);
 }
 .offer{
-    background: url(images/offer.png) repeat center center rgba(0, 0, 0, 0.7) !important;
     background-size: 100%;
     background-position: center top;
 }
@@ -737,6 +736,7 @@ body.creative-head .header-section {
     font-family: 'Karla', sans-serif;
     line-height: 1.7;
     letter-spacing: 0;
+    font-size: 24px;
 }
 
 .NotGeneric-CallToAction:hover,
@@ -1454,8 +1454,8 @@ hr.invis1 {
 
 .image-box.bg2,
 .image-box.bg3,
-.image-box.bg1 {
-    background: #ffffff url("upload/box_01.jpg") no-repeat center center;
+.image-box.bg1,.image-box.bg4,.image-box.bg5 {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("upload/box_01.jpg") no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -1463,11 +1463,27 @@ hr.invis1 {
 }
 
 .image-box.bg2 {
-    background-image: url("upload/box_02.jpg");
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('upload/box_02.jpg'); 
+    background-size: cover;
 }
 
 .image-box.bg3 {
-    background-image: url("upload/box_03.jpg");
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("upload/box_03.jpg");
+    background-size: cover;
+}
+.image-box.bg4 {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)),url("upload/landscapping.jpg");
+    background-size: cover;
+    
+
+}
+.image-box.bg5 {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("upload/box_05.jpg");
+    background-size: cover;
+}
+.image-box.bg6 {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url("upload/box-06.jpg");
+    background-size: cover;
 }
 
 .services img {
@@ -2866,13 +2882,15 @@ hr.dashedhr {
         padding: 1rem
     }
     .normal-header .navbar-toggler-right {
-        top: -3px;
+        top: 0px;
+        right: -15px;
     }
     .normal-header .fixed-top {
         position: relative !important;
     }
     .bg-inverse {
-        background-color: #141414 !important;
+        background-color: rgb(255, 255, 255) !important;
+        box-shadow: none;
     }
     .m30 {
         margin: 1rem 0;
@@ -2903,7 +2921,7 @@ hr.dashedhr {
         border: 0 !important;
     }
     .tagline-message h3 {
-        font-size: 16px;
+        font-size: 32px;
     }
 }
 
@@ -2971,4 +2989,95 @@ hr.dashedhr {
         right: 130%;
         left: auto;
     }
+}
+.title{
+    font-size: 1rem;
+    color: #151515ad;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Montserrat', serif;
+    line-height: 25px;
+    
+}
+.designs{
+    font-size: 2rem;
+    color: #bc0809;
+    font-weight: 800;
+}
+
+/* Apply grid layout to the navbar */
+.navbar-grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;  /* 3 columns: logo, title, menu */
+    align-items: center;  /* Center content vertically */
+    justify-items: start;  /* Align items to the left */
+    width: 100%;
+}
+
+.navbar-grid-container .navbar-brand {
+    grid-column: 1;  /* First column (Logo) */
+}
+
+.title {
+    grid-column: 2;  /* Second column (Title) */
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    grid-column: 3;  /* Third column (Hamburger menu) */
+    justify-self: end;  /* Align the button to the right */
+}
+
+/* Ensuring mobile responsiveness for the navbar */
+@media (max-width: 767px) {
+    .navbar-grid-container {
+        grid-template-columns: 1fr 2fr; /* Stack logo/title, navbar-toggler on top */
+    }
+    
+    .title {
+        text-align: left;  /* Align title to the left on smaller screens */
+    }
+
+    .navbar-nav {
+        text-align: center;  /* Center the navbar items in mobile view */
+    }
+
+    .navbar-toggler {
+        grid-column: span 2;  /* Make the toggler span two columns for mobile */
+    }
+}
+
+@media (min-width: 962px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+h3 br::after {
+    content: "Hello";
+    display: block;
+    height: 2px;  /* Thickness of the line */
+    background-color: black;  /* Color of the bold line */
+    margin-top: 10px;  /* Space above the line */
+}
+
+h3 .house {
+    display: block;
+    width: 100%; /* Ensures the break takes the full width */
+    font-weight: 600;
+}
+
+h3 .house::after {
+    content: "";
+    display: block;
+}
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Black with 50% opacity */
+    z-index: 1;
 }
