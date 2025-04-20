@@ -574,7 +574,7 @@ body.boxed .bg-inverse {
     display: inline-block;
     width: 20px;
     height: 20px;
-    color: #ffffff;
+    color: rgb(188, 8, 9);;
     line-height: 20px;
     text-align: center;
 }
