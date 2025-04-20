@@ -670,10 +670,11 @@ body.creative-head .header-section {
     left: 0;
     bottom: 0;
     background: url(images/pattern.jpg) repeat center center rgba(0, 0, 0, 0.7);
+    background-size: cover;
 }
 .offer{
     background-size: 100%;
-    background-position: center top;
+    background-position: center bottom;
 }
 
 .nopadbot {
