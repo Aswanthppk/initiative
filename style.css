@@ -436,7 +436,7 @@ body.boxed .bg-inverse {
 }
 
 .normal-header .navbar {
-    padding: 0;
+    padding: 15px;
 }
 
 .fixed-top {
