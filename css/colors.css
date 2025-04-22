@@ -8,9 +8,7 @@
 **************************************/
 
 .cat-title,
-.team-desc small,
-.btn-primary:hover,
-.btn-primary:focus, 
+.team-desc small, 
 .btn-primary.focus,
 .btn-primary.disabled,
 .btn-primary:disabled,
@@ -36,7 +34,7 @@
 mark,
 .pricing-table .btn-dark,
 .bg {
-	opacity: 1;
+	opacity: 0;
 	color:#141414;
   background-color:#bc0809;
 }

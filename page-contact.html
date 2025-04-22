@@ -175,21 +175,21 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <h3 class="widget-title dark-color">Contact Form</h3>
-                        <form class="gform"> 
+                        <form class="gform" id="form"> 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your name">
+                                <input type="text" class="form-control" placeholder="Your name" id="name">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your email address">
+                                <input type="email" class="form-control" placeholder="Your email address" id="email">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your phone">
+                                <input type="text" class="form-control" placeholder="Your phone" id="phone">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="What is your message?"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="What is your message?" id="messages"></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
                             </div>
                         </form>
                     </div><!-- end col -->
@@ -199,20 +199,19 @@
                             <ul>
                                 <li>
                                     <h3 class="widget-title">Our Office</h3>
-                                    <small>Janakeeya Nagar, Pavathyar Jn, Pattathanam P.O,<br>Arvin Homes, 
-                                        Kollam<br>KERALA</small>
+                                    <small>2nd floor, Arvin Homes, Pattathanam P.O,<br>Kollam<br>KERALA</small>
                                 </li>
                                 <li>
                                     <h3 class="widget-title">Our Phones</h3>
-                                    <small>+91 9446273179<br></small>
+                                    <small>+91 9446273179<br>+91 9446273179<br>+91 9447010534</small>
                                 </li>
                                 <li>
                                     <h3 class="widget-title">Our Email</h3>
-                                    <small></small>
+                                    <small>md.houseofdesigns@gmail.com <br> hod.n.builders@gmail.com</small>
                                 </li>
                                 <li>
                                     <h3 class="widget-title">Social Media</h3>
-                                    <small> <a href="https://www.instagram.com/house.of.designz/"><i class="fa fa-instagram"></i> Instagram</a><br><a href="https://www.youtube.com/@house.of.designz"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a><br> <a  href="https://www.linkedin.com/company/houseofdesignz"> <i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a></small>
+                                    <small> <a href="https://www.instagram.com/house.of.designz/"><i class="fa fa-instagram"></i> Instagram</a><br><a href="https://www.youtube.com/@house.of.designz"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a><br> <a  href="https://www.linkedin.com/company/houseofdesignz"> <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></small>
                                 </li>
                             </ul>
                         </div><!-- end contact -->
@@ -306,10 +305,8 @@
                             <div class="contact-widget">
                                 <ul>
                                     <li><span>Phone :</span> +91 9778273179</li>
-                                    <li><span>Website :</span>houseofdesigns.com</li>
-                                    <li><span>Address :</span>Janakeeya Nagar, Pavathyar Jn, Pattathanam P.O,
-                                        Arvin Homes, Kollam
-                                        KERALA</li>
+                                    <li><span>Website :</span>houseofdesigns.co</li>
+                                    <li><span>Address :</span>2nd floor, Arvin Homes, Pattathanam P.O, Kollam, KERALA</li>
                                 </ul>
                             </div>
                         </div><!-- end image-box -->
@@ -335,6 +332,31 @@
     <!-- MAP & CONTACT -->
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAkADq7R0xf6ami9YirAM1N-yl7hdnYBhM"></script>
     <script src="js/map.js"></script>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function (e) {
+    e.preventDefault();
+    const form = document.getElementById('form')
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('messages').value.trim();
+    
+
+    if (!name || !email || !message || !phone) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    const whatsappNumber = '919446273179'; // Include country code (India = 91)
+    const text = `Hello, I am ${name}.\nEmail: ${email}\nMessage: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, '_blank');
+    form.reset()
+
+  });
+    </script>
 
 </body>
 
